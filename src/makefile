@@ -1,8 +1,13 @@
 #specify the compiler
 CXX=g++ -std=c++0x
 
-all:
+all: init	
 	$(CXX) main.cpp -o bin/main.out
 
 clean:
-	rm bin/*.out
+	rm -r bin/*	
+
+init:
+	mkdir -p bin
+	mkdir -p bin/output	
+
