@@ -5,7 +5,7 @@ all: init
 	$(CXX) main.cpp -o bin/main.out
 
 clean:
-	rm -r bin/*	
+	rm -rf bin/*	
 
 init:
 	mkdir -p bin

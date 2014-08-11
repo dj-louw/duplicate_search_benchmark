@@ -12,11 +12,13 @@
 // #include <fstream>	
 
 //#include "NaiveApproach.hpp"
-#include "FilePrinter.hpp"
-#include "util.hpp"
-#include "bench.hpp"
-#include "benchstream.hpp"
-#include "PrepPhase.hpp"
+//#include "FilePrinter.hpp"
+//#include "util.hpp"
+//#include "bench.hpp"
+//#include "benchstream.hpp"
+#include "prep/PrepPhase.hpp"
+//#include "algorithms/CombinedQuickSort.hpp"
+//#include "prep/PrepPhase.hpp"
 
 using namespace std;
 
@@ -25,28 +27,14 @@ int main()
 	cout << "Duplicate Finding Algorithm Benchmark Tool" << endl;
 
 
-	//-----------------------------------------------------------------------------
-	// Call this function to simulate the stream-based data benchmark
-	// Implementation located in benchstream.hpp
-	//DoStreamBench();
-	//-----------------------------------------------------------------------------
 
+	// vector<int> ArrayOfRandomNumbers = GenerateRandomArray(50, 0);
 
+	// ImprovedQuickSort CurrentAlgorithm = ImprovedQuickSort(ArrayOfRandomNumbers);
 
-	//-----------------------------------------------------------------------------
-	// Call this function to simulate the array-based data benchmark
-	// Implementation located in benchstream.hpp
-	//DoArrayBench();
-	//-----------------------------------------------------------------------------
-
-
+	// CurrentAlgorithm.Do();
 
 	PerformPrepPhase();
-
-
-	
-
-
 
 
 	// pause and require input before exit
