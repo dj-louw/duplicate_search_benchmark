@@ -17,7 +17,7 @@
 //#include "bench.hpp"
 //#include "benchstream.hpp"
 #include "prep/PrepPhase.hpp"
-//#include "algorithms/CombinedQuickSort.hpp"
+#include "algorithms/CombinedQuickSort.hpp"
 //#include "prep/PrepPhase.hpp"
 
 using namespace std;
@@ -28,13 +28,15 @@ int main()
 
 
 
-	// vector<int> ArrayOfRandomNumbers = GenerateRandomArray(50, 0);
+	vector<int> ArrayOfRandomNumbers = GenerateRandomArray(13, 0.5);
 
-	// ImprovedQuickSort CurrentAlgorithm = ImprovedQuickSort(ArrayOfRandomNumbers);
+	ImprovedQuickSort CurrentAlgorithm = ImprovedQuickSort(ArrayOfRandomNumbers);
 
-	// CurrentAlgorithm.Do();
+	CurrentAlgorithm.Do();
 
-	PerformPrepPhase();
+	cout << CurrentAlgorithm.GetDuplicateCounter() << endl;
+
+	//PerformPrepPhase();
 
 
 	// pause and require input before exit

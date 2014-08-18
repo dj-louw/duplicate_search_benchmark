@@ -31,9 +31,11 @@ class ImprovedQuickSort
 		{
 			DuplicatesFound = 0;
 			vector<int> TempArray = InputArray;
-			PrintArray(TempArray);			
+			PrintArray(TempArray);
 			QuickSort(TempArray);	
-			PrintArray(TempArray);			
+			PrintArray(TempArray);
+			FindDuplicates(TempArray);
+		
 		}
 	private:
 
@@ -86,6 +88,21 @@ class ImprovedQuickSort
 		}
 
 
+		void FindDuplicates(vector<int> & _inputArray)
+		{
+			for (int i = 0; i < _inputArray.size(); )
+			{
+				cout << "comparing: " << _inputArray[i] << " with: " << _inputArray[i+1] << endl;
+				if (_inputArray[i] == _inputArray[i+1])
+				{
+					DuplicatesFound++;
+					cout << "BOOM!";					
+				}
+				else
+					break;
+				i = i+2;
+			}
+		}
 
 
 

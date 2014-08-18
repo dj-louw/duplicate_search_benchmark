@@ -23,7 +23,7 @@ vector<int> GenerateRandomArray(int _arraySize, float _fractionDuplicates = 0.5)
 	int i = 1;
 
 	// fill the first bit with sequential numbers, starting with 1
-	for ( ; ArrayOfNumbers.size() < int(_arraySize * (1-_fractionDuplicates)) ; i++)
+	for ( ; ArrayOfNumbers.size() < int(_arraySize * (1-_fractionDuplicates))+1 ; i++)
 	{
 		ArrayOfNumbers.push_back(i);
 	}
