@@ -29,17 +29,17 @@ int main()
 
 
 
-	vector<int> ArrayOfRandomNumbers = GenerateRandomArray(1, 0.5);
+	// vector<int> ArrayOfRandomNumbers = GenerateRandomArray(1, 0.5);
 
-	//ImprovedQuickSort CurrentAlgorithm = ImprovedQuickSort(ArrayOfRandomNumbers);
-	BSTSearch CurrentAlgorithm = BSTSearch(ArrayOfRandomNumbers);
+	// //ImprovedQuickSort CurrentAlgorithm = ImprovedQuickSort(ArrayOfRandomNumbers);
+	// BSTSearch CurrentAlgorithm = BSTSearch(ArrayOfRandomNumbers);
 
-	CurrentAlgorithm.Do();
+	// CurrentAlgorithm.Do();
 
-	cout << CurrentAlgorithm.GetDuplicateCounter() << endl;
-	cout << CurrentAlgorithm.GetStepCounter() << endl;
+	// cout << CurrentAlgorithm.GetDuplicateCounter() << endl;
+	// cout << CurrentAlgorithm.GetStepCounter() << endl;
 
-	//PerformPrepPhase();
+	PerformPrepPhase();
 
 
 	// pause and require input before exit
