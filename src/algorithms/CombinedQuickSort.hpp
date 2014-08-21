@@ -31,14 +31,20 @@ class ImprovedQuickSort
 			return DuplicatesFound;
 		}
 
+		int GetStepCounter()
+		{
+			StepCounter = StepCounter + 1;
+			return StepCounter;
+		}
+
 		void Do()
 		{
 			StepCounter = StepCounter + 4;
 			DuplicatesFound = 0;
 			vector<int> TempArray = InputArray;
-			//PrintArray(TempArray);
+
 			QuickSort(TempArray);	
-			//PrintArray(TempArray);
+
 			FindDuplicates(TempArray);
 		
 		}
@@ -65,12 +71,12 @@ class ImprovedQuickSort
 			while (lower <= upper)
 			{
 				StepCounter = StepCounter + 3;
-				while (bound < _inputArray[lower])
+				while (bound > _inputArray[lower])
 				{
 					StepCounter = StepCounter + 1;
 					lower++;
 				}
-				while (bound > _inputArray[upper])
+				while (bound < _inputArray[upper])
 				{
 					StepCounter = StepCounter + 1;
 					upper--;
@@ -114,7 +120,7 @@ class ImprovedQuickSort
 			for (int i = 0; i < _inputArray.size(); i++)
 			{
 				StepCounter = StepCounter + 1;
-				if (_inputArray[min] > _inputArray[i])
+				if (_inputArray[min] < _inputArray[i])
 				{
 					StepCounter = StepCounter + 1;
 					min = i;				
@@ -131,12 +137,10 @@ class ImprovedQuickSort
 			for (int i = 0; i < _inputArray.size(); )
 			{
 				StepCounter = StepCounter + 3;
-				cout << "comparing: " << _inputArray[i] << " with: " << _inputArray[i+1] << endl;
 				if (_inputArray[i] == _inputArray[i+1])
 				{
 					StepCounter = StepCounter + 1;
-					DuplicatesFound++;
-					cout << "BOOM!";					
+					DuplicatesFound++;				
 				}
 				else
 				{

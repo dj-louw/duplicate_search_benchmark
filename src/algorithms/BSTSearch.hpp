@@ -95,6 +95,11 @@ class BSTSearch
 			StepCounter = StepCounter + 1;
 			return TempDupsCounter;
 		}
+		int GetStepCounter()
+		{
+			StepCounter = StepCounter + 1;
+			return StepCounter;
+		}
 
 		void Do()
 		{

@@ -13,11 +13,12 @@
 
 //#include "NaiveApproach.hpp"
 //#include "FilePrinter.hpp"
-//#include "util.hpp"
+#include "util/ArrayTools.hpp"
 //#include "bench.hpp"
 //#include "benchstream.hpp"
 #include "prep/PrepPhase.hpp"
 #include "algorithms/CombinedQuickSort.hpp"
+#include "algorithms/BSTSearch.hpp"
 //#include "prep/PrepPhase.hpp"
 
 using namespace std;
@@ -28,13 +29,15 @@ int main()
 
 
 
-	vector<int> ArrayOfRandomNumbers = GenerateRandomArray(13, 0.5);
+	vector<int> ArrayOfRandomNumbers = GenerateRandomArray(1, 0.5);
 
-	ImprovedQuickSort CurrentAlgorithm = ImprovedQuickSort(ArrayOfRandomNumbers);
+	//ImprovedQuickSort CurrentAlgorithm = ImprovedQuickSort(ArrayOfRandomNumbers);
+	BSTSearch CurrentAlgorithm = BSTSearch(ArrayOfRandomNumbers);
 
 	CurrentAlgorithm.Do();
 
 	cout << CurrentAlgorithm.GetDuplicateCounter() << endl;
+	cout << CurrentAlgorithm.GetStepCounter() << endl;
 
 	//PerformPrepPhase();
 

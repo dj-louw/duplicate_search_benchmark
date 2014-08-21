@@ -23,8 +23,9 @@ vector<int> GenerateRandomArray(int _arraySize, float _fractionDuplicates = 0.5)
 	int i = 1;
 
 	// fill the first bit with sequential numbers, starting with 1
-	for ( ; ArrayOfNumbers.size() < int(_arraySize * (1-_fractionDuplicates))+1 ; i++)
+	for ( ; ArrayOfNumbers.size() < int(_arraySize * (1-_fractionDuplicates)) ; i++)
 	{
+		ArrayOfNumbers.push_back(i);
 		ArrayOfNumbers.push_back(i);
 	}
 
@@ -33,8 +34,8 @@ vector<int> GenerateRandomArray(int _arraySize, float _fractionDuplicates = 0.5)
 	{
 		if (ArrayOfNumbers.size() < _arraySize)
 			ArrayOfNumbers.push_back(i*2);
-		if (ArrayOfNumbers.size() < _arraySize)
-			ArrayOfNumbers.push_back(i*2);
+		// if (ArrayOfNumbers.size() < _arraySize)
+		// 	ArrayOfNumbers.push_back(i*2);
 	}
 	// make sure the system sleeps for at least a second so that the rng gets seeded with a new seed every time.
 	std::this_thread::sleep_for(std::chrono::seconds(1));
