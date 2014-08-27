@@ -21,6 +21,10 @@
 #include "algorithms/BSTSearch.hpp"
 //#include "prep/PrepPhase.hpp"
 
+
+// include DanLib
+#include "../danlib/danlib.h"
+
 using namespace std;
 
 int main()
@@ -45,8 +49,10 @@ int main()
 		f = f + 0.1;
 	}
 	
-	
+*/
 
+	DanLib::FileTool ft;
+	ft.InitOFile("lel")	;
 
 
 /**/
@@ -71,7 +77,7 @@ int main()
 /******************************************************
 * Preparatory Phase
 */
-PerformPrepPhase();
+//PerformPrepPhase();
 
 
 	// pause and require input before exit

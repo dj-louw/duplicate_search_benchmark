@@ -1,0 +1,3 @@
+[submodule "danlib"]
+	path = danlib
+	url = https://github.com/getack/danlib.git
