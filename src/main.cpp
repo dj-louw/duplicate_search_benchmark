@@ -28,6 +28,29 @@ int main()
 	cout << "Duplicate Finding Algorithm Benchmark Tool" << endl;
 
 
+/*
+* Testing section
+*
+
+	for (float f = 0.0; f <= 1.1;)
+	{
+
+		cout << "p = " << float(f) << " > " ;
+
+		int n = 10;
+		// float p = 0.0;
+		vector<int> testArray = GenerateRandomArray(n,f);
+		PrintArray(testArray);	
+
+		f = f + 0.1;
+	}
+	
+	
+
+
+
+/**/
+
 
 	// vector<int> ArrayOfRandomNumbers = GenerateRandomArray(1, 0.5);
 
@@ -39,7 +62,16 @@ int main()
 	// cout << CurrentAlgorithm.GetDuplicateCounter() << endl;
 	// cout << CurrentAlgorithm.GetStepCounter() << endl;
 
-	PerformPrepPhase();
+
+
+
+
+
+
+/******************************************************
+* Preparatory Phase
+*/
+PerformPrepPhase();
 
 
 	// pause and require input before exit

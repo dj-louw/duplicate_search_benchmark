@@ -22,8 +22,8 @@ vector<int> GenerateRandomArray(int _arraySize, float _fractionDuplicates = 0.5)
 
 	int i = 1;
 
-	// fill the first bit with sequential numbers, starting with 1
-	for ( ; ArrayOfNumbers.size() < int(_arraySize * (1-_fractionDuplicates)) ; i++)
+	// fill the first bit with the amount of duplicates specified.
+	for ( ; ArrayOfNumbers.size() < int(_arraySize * (_fractionDuplicates)) ; i++)
 	{
 		ArrayOfNumbers.push_back(i);
 		ArrayOfNumbers.push_back(i);
@@ -33,7 +33,7 @@ vector<int> GenerateRandomArray(int _arraySize, float _fractionDuplicates = 0.5)
 	for ( ; ArrayOfNumbers.size() <= _arraySize - 1; i++)
 	{
 		if (ArrayOfNumbers.size() < _arraySize)
-			ArrayOfNumbers.push_back(i*2);
+			ArrayOfNumbers.push_back(i);
 		// if (ArrayOfNumbers.size() < _arraySize)
 		// 	ArrayOfNumbers.push_back(i*2);
 	}
@@ -42,7 +42,7 @@ vector<int> GenerateRandomArray(int _arraySize, float _fractionDuplicates = 0.5)
 	// seed the rng
 	srand(time(0));
 	// shuffle the vector using the fisher-yates algorithm, conveniently built into C++ for us.	
-	std::random_shuffle(ArrayOfNumbers.begin(), ArrayOfNumbers.end());
+	//std::random_shuffle(ArrayOfNumbers.begin(), ArrayOfNumbers.end());
 	return ArrayOfNumbers;
 }
 
