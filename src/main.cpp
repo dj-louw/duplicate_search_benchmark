@@ -9,21 +9,23 @@
 #include <sstream>
 #include <string>
 
-// #include <fstream>	
+
+// External Libraries
+#include "../danlib/danlib.h"
+
+
 
 //#include "NaiveApproach.hpp"
 //#include "FilePrinter.hpp"
 #include "util/ArrayTools.hpp"
-//#include "bench.hpp"
+#include "bench/bench.hpp"
 //#include "benchstream.hpp"
 #include "prep/PrepPhase.hpp"
-#include "algorithms/CombinedQuickSort.hpp"
-#include "algorithms/BSTSearch.hpp"
+// #include "algorithms/CombinedQuickSort.hpp"
+// #include "algorithms/BSTSearch.hpp"
 //#include "prep/PrepPhase.hpp"
 
 
-// include DanLib
-#include "../danlib/danlib.h"
 
 using namespace std;
 
@@ -51,8 +53,9 @@ int main()
 	
 */
 
-	DanLib::FileTool ft;
-	ft.InitOFile("lel")	;
+
+	DoBenchMark();
+
 
 
 /**/
@@ -67,9 +70,6 @@ int main()
 
 	// cout << CurrentAlgorithm.GetDuplicateCounter() << endl;
 	// cout << CurrentAlgorithm.GetStepCounter() << endl;
-
-
-
 
 
 
