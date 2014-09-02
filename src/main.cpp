@@ -14,6 +14,7 @@
 #include "../danlib/danlib.h"
 
 
+#include "algorithms/algorithms.h"
 
 //#include "NaiveApproach.hpp"
 //#include "FilePrinter.hpp"
@@ -23,11 +24,15 @@
 #include "prep/PrepPhase.hpp"
 // #include "algorithms/CombinedQuickSort.hpp"
 // #include "algorithms/BSTSearch.hpp"
+
+
+
+
 //#include "prep/PrepPhase.hpp"
 
 
-
 using namespace std;
+
 
 int main()
 {

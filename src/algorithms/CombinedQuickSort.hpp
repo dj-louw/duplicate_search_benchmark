@@ -1,10 +1,12 @@
 #ifndef IMPROVEDQUICKSORT
 #define IMPROVEDQUICKSORT
 
-#include "../util/ArrayTools.hpp"
+// #include "../util/ArrayTools.hpp"
 
-//temp
-#include <iostream>
+// //temp
+// #include <iostream>
+
+using namespace std;
 
 class ImprovedQuickSort
 {
@@ -19,7 +21,8 @@ class ImprovedQuickSort
 			StepCounter = StepCounter + 1;
 			Init(_inputArray);
 		}		
-		ImprovedQuickSort(){}
+		ImprovedQuickSort() : StepCounter(0), DuplicatesFound(0){}
+		
 		void Init(vector<int> & _inputArray)
 		{
 			StepCounter = StepCounter + 1;

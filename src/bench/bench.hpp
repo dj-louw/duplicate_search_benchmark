@@ -9,7 +9,6 @@
 
 unsigned TokenizeString(const string& i_source, const string& i_seperators, bool i_discard_empty_tokens, vector<string>& o_tokens)
 {
-
 	unsigned prev_pos = 0;
 	int pos = 0;
 	unsigned number_of_tokens = 0;
@@ -46,9 +45,9 @@ void DoBenchMark()
 
 	DanLib::FileTool ft;
 
-	for (int x = 1; x <= 1; x++)
+	for (int x = 1; x <= 1; x++) // x <= 11
 	{
-		for (int y = 1; y <= 1; y++)
+		for (int y = 1; y <= 1; y++) // x <= 5
 		{
 			// calculate the name of the file and open it
 			stringstream fileName;
@@ -56,7 +55,7 @@ void DoBenchMark()
 			//fileName << "../data/I-File-" << x << "-" << y;
 			fileName << "../data/TESTDATA";
 				
-			cout << "Opening " << fileName.str() << endl;
+			//cout << "Opening " << fileName.str() << endl;
 
 			ft.InitIFile(fileName.str());
 
@@ -70,20 +69,41 @@ void DoBenchMark()
 				vector<string> stringsFromLine;
 				TokenizeString(CurrentLine, "|", true, stringsFromLine);
 
-				vector<int> numbersFromLine;
+				vector<int> currentData;
 
 				for (auto elem : stringsFromLine)
 				{
 					int temp = atoi(elem.c_str());
-					numbersFromLine.push_back(temp);
+					currentData.push_back(temp);
 				}
 
 				/**********************************************************
-					Now we have an array, numbersFromLine,
+					Now we have an array, currentData,
 					containing the random numbers that must be processed
 				*/
 
+				// the program step counters
+				int QuickSortCounter, BSTreeCounter = 0;
+
+				// The Binary Tree based method
+				vector<int> tempA(currentData); // we make a copy of the data just to be on the safe side.
+				BSTSearch MethodA = BSTSearch(tempA);
+				MethodA.Do();
+				BSTreeCounter = MethodA.GetStepCounter();
 				
+				// The QuickSort based method
+				vector<int> tempB(currentData); // we make a copy of the data just to be on the safe side.
+				ImprovedQuickSort MethodB = ImprovedQuickSort(tempB);
+				MethodB.Do();
+				QuickSortCounter = MethodB.GetStepCounter();
+
+				cout << "Binary took: " << BSTreeCounter << " steps to complete." << endl;
+				cout << "Quick took:  " << QuickSortCounter << " steps to complete." << endl;
+
+
+
+
+
 
 
 

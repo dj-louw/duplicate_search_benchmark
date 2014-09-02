@@ -1,6 +1,9 @@
 #ifndef BSTSEARCH
 #define BSTSEARCH
 
+
+using namespace std;
+
 unsigned long long int StepCounter;
 
 class BSTree {
@@ -74,11 +77,13 @@ class BSTSearch
 	public:
 		BSTSearch(vector<int> &_inputArray)
 		{
+			StepCounter = 0;
 			StepCounter = StepCounter + 1;
 			Init(_inputArray);
 		}		
 		BSTSearch()
 		{
+			StepCounter = 0;
 			StepCounter = StepCounter + 3;
 			bstree = new BSTree();
 			TempDupsCounter = 0;
