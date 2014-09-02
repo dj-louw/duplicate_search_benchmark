@@ -117,7 +117,11 @@ class BSTSearch
 				TempArray.pop_back();				
 			} while (!TempArray.empty());
 
-			TempDupsCounter = bstree->mDupCounter;
+
+
+
+			TempDupsCounter = bstree->mDupCounter;			
+
 			delete bstree;
 			bstree = new BSTree();
 		}

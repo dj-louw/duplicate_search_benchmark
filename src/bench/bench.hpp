@@ -45,26 +45,44 @@ void DoBenchMark()
 
 	DanLib::FileTool ft;
 
-	for (int x = 1; x <= 1; x++) // x <= 11
+	for (int x = 1; x <= 11; x++) // x <= 11
 	{
-		for (int y = 1; y <= 1; y++) // x <= 5
+		for (int y = 1; y <= 5; y++) // x <= 5
 		{
 			// calculate the name of the file and open it
-			stringstream fileName;
+			stringstream iFileName, oFileName;
 			
-			//fileName << "../data/I-File-" << x << "-" << y;
-			fileName << "../data/TESTDATA";
+			iFileName << "../data/I-File-" << x << "-" << y;
+			oFileName << "../data/output/O-File-" << x << "-" << y;
+			//iFileName << "../data/TESTDATA";
 				
-			//cout << "Opening " << fileName.str() << endl;
+			cout << "Opening " << iFileName.str() << " and " << oFileName.str() << endl;
 
-			ft.InitIFile(fileName.str());
+			ft.InitIFile(iFileName.str());
+			ft.InitOFile(oFileName.str());
 
 
 
 			//read the lines into an array and do the magic!
 			string CurrentLine; 
+
+			// the program step counters
+			float QuickSortCounter, BSTreeCounter = 0.0;
+
+			// Line counter, used in average calculations
+			int LineCounter = 0;
+
+			// the size of the current array being worked on. (float for avg calculation)
+			float ArraySize = 0;
+
+			// the amount of duplicates found for each algorithm (float for avg calculation)
+			float BSTDupsFound = 0.0;
+			float QuickDupsFound = 0.0;
+
 			while (ft.ReadLineFromFile(CurrentLine))
 			{
+
+				LineCounter++;
 
 				vector<string> stringsFromLine;
 				TokenizeString(CurrentLine, "|", true, stringsFromLine);
@@ -77,41 +95,71 @@ void DoBenchMark()
 					currentData.push_back(temp);
 				}
 
+				ArraySize += currentData.size();
+
 				/**********************************************************
 					Now we have an array, currentData,
 					containing the random numbers that must be processed
 				*/
 
-				// the program step counters
-				int QuickSortCounter, BSTreeCounter = 0;
+
+
+
 
 				// The Binary Tree based method
 				vector<int> tempA(currentData); // we make a copy of the data just to be on the safe side.
 				BSTSearch MethodA = BSTSearch(tempA);
 				MethodA.Do();
-				BSTreeCounter = MethodA.GetStepCounter();
+				BSTreeCounter = BSTreeCounter + MethodA.GetStepCounter();
+				BSTDupsFound = BSTDupsFound + MethodA.GetDuplicateCounter();
+
 				
 				// The QuickSort based method
 				vector<int> tempB(currentData); // we make a copy of the data just to be on the safe side.
 				ImprovedQuickSort MethodB = ImprovedQuickSort(tempB);
 				MethodB.Do();
-				QuickSortCounter = MethodB.GetStepCounter();
+				QuickSortCounter = QuickSortCounter + MethodB.GetStepCounter();
+				QuickDupsFound = QuickDupsFound + MethodB.GetDuplicateCounter();
 
 				cout << "Binary took: " << BSTreeCounter << " steps to complete." << endl;
 				cout << "Quick took:  " << QuickSortCounter << " steps to complete." << endl;
 
-
-
-
-
-
-
-
 			};
+
+
+			// File header (intended to be used as a sanity check)
+
+			ArraySize = ArraySize / LineCounter; // this number should have no decimal
+			float ProportionDups = ((x-1)/10.0); // calculate the proportion of duplicates that must be present
+			// The actual duplicates found for each file
+			
+			BSTDupsFound = BSTDupsFound / LineCounter;
+			QuickDupsFound = QuickDupsFound / LineCounter;
+
+			stringstream fileHeader;
+			fileHeader <<
+				"O-File-" << x << "-" << y << endl
+				<< "Average array size for this file was: " << ArraySize << endl
+				<< "The (expected) proportion of duplicates for each array in this file: " << ProportionDups << "," << endl
+				<< "which is equal to " << (ArraySize * ProportionDups)/2 << " duplicate pairs" << endl
+				<< "The QuickSort Algorithm found: " << QuickDupsFound << " duplicate pairs." << endl
+				<< "The BST Search Algorithm found: " << BSTDupsFound << " duplicate pairs." << endl				
+				<< "####" << endl;
+
+			ft.WriteToFile(fileHeader.str());
+
+			// calculate the averages and write them to the current file
+			QuickSortCounter = QuickSortCounter / LineCounter;
+			ft.WriteToFileNewLine(to_string(QuickSortCounter) + " | <- QuickSort Algorithm");
+
+			BSTreeCounter = BSTreeCounter / LineCounter;
+			ft.WriteToFileNewLine(to_string(BSTreeCounter) + " | <- BSTree Algorithm");
+
 
 			
 
-
+			// finally, close the filetool and start over
+			ft.Close();
 
 
 
