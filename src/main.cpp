@@ -63,8 +63,8 @@ int main()
 
 
 
-	DoBenchMark();
-	//DoDifference();
+	//DoBenchMark();
+	DoDifference();
 
 
 

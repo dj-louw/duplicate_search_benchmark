@@ -183,8 +183,14 @@ void DoDifference()
 			// calculate the name of the file and open it
 			stringstream iFileName;			
 
-			//iFileName << "../data/output/O-File-" << x << "-" << y;	
-			iFileName << "../data/testarrays/output/O-File-" << x << "-" << y;				
+			if (TestMode)
+			{			
+				iFileName << "../data/testarrays/output/O-File-" << x << "-" << y;				
+			} else 
+			{			
+				iFileName << "../data/output/O-File-" << x << "-" << y;	
+			}
+			
 
 			cout << "Opening " << iFileName.str() << endl;
 			ft.InitIFile(iFileName.str());
