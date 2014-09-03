@@ -1,9 +1,10 @@
-O-File-2-4
-Average array size for this file was: 2700
-The (expected) proportion of duplicates for each array in this file: 0.1,
-which is equal to 135 duplicate pairs
-The QuickSort Algorithm found: 135 duplicate pairs.
-The BST Search Algorithm found: 135 duplicate pairs.
-####
+# O-File-2-4
+# 10 arrays were found in this file,
+# with an average array size of: 2700
+# The (expected) proportion of duplicates for each array in this file: 0.1,
+# which is equal to 135 duplicate pairs
+# The QuickSort Algorithm found: 135 duplicate pairs.
+# The BST Search Algorithm found: 135 duplicate pairs.
+# 
 121595.187500 | <- QuickSort Algorithm
 300125.812500 | <- BSTree Algorithm
