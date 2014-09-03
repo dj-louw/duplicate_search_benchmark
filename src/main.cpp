@@ -10,6 +10,9 @@
 #include <string>
 
 
+// Global Variable
+bool TestMode = false;
+
 // External Libraries
 #include "../danlib/danlib.h"
 
@@ -59,7 +62,9 @@ int main()
 */
 
 
+
 	DoBenchMark();
+	//DoDifference();
 
 
 
