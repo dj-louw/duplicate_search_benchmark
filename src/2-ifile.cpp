@@ -67,18 +67,9 @@ int main()
 					ft.WriteVectorToFile(currentData, "|" );
 
 				};
-
-
-
-
-
-
-
 			}
 			// finally, close the filetool and start over
 			ft.Close();
-
-
 		}
 	}
 

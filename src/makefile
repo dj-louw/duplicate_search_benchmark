@@ -6,8 +6,17 @@ CXX=g++ -std=c++0x
 ##     Compilation Directives
 #########################################
 
-all: 1-afile 2-ifile 3-quicksort 4-bstree-nodelete 5-bstree-withdelete 6-ofile 7-dfile	
-	$(CXX) main.cpp -o bin/main.out
+# all: 1-afile 2-ifile 3-quicksort 4-bstree-nodelete 5-bstree-withdelete 6-ofile 7-dfile	
+# 	$(CXX) main.cpp -o bin/main.out
+
+all:
+	make 1-afile
+	make 2-ifile
+	make 3-quicksort
+	make 4-bstree-nodelete
+	make 5-bstree-withdelete
+	make 6-ofile
+	make 7-dfile
 
 1-afile: init-afile
 	$(CXX) 1-afile.cpp -o bin/1-afile.out
