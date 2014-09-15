@@ -1,33 +1,15 @@
-#include <random>
-#include <iostream>
-#include <stdlib.h>
-#include <time.h>
-#include <chrono>
-#include <vector>
-#include <sstream>
-#include <string>
 
+// C++ includes
+#include <iostream> // for io related stuff
+#include <sstream> // for std::stringstream
+#include <string> // for std::string
 
-
-// External Libraries
+// External Library includs
 #include "../danlib/danlib.h"
 
-
+// Other file includes
 #include "algorithms/algorithms.h"
-
-//#include "NaiveApproach.hpp"
-//#include "FilePrinter.hpp"
-#include "util/ArrayTools.hpp"
-#include "bench/bench.hpp"
-//#include "benchstream.hpp"
-#include "prep/PrepPhase.hpp"
-// #include "algorithms/CombinedQuickSort.hpp"
-// #include "algorithms/BSTSearch.hpp"
-
-
-
-
-//#include "prep/PrepPhase.hpp"
+#include "BSTMethod.hpp"
 
 
 using namespace std;
@@ -35,53 +17,11 @@ using namespace std;
 
 int main()
 {
-	cout << "Duplicate Finding Algorithm Benchmark Tool" << endl;
+
+	cout << "BST Algorithm - No Delete: reads IFiles, Performs at the duplicate searching and " << endl;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	DoBSTMethod(false);
 
 
 	cout << "\nPress Return key to exit"; 
