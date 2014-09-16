@@ -1,5 +1,5 @@
 #specify the compiler
-CXX=g++ -std=c++0x
+CXX=g++ -std=c++0x -g
 
 
 #########################################
@@ -37,7 +37,10 @@ all:
 	$(CXX) 6-ofile.cpp -o bin/6-ofile.out	
 
 7-dfile: init-dfile
-	$(CXX) 7-dfile.cpp -o bin/7-dfile.out	
+	$(CXX) 7-dfile.cpp -o bin/7-dfile.out
+
+test:
+	$(CXX) test.cpp -o bin/test.out	
 
 
 #########################################
@@ -45,7 +48,13 @@ all:
 #########################################
 
 clean-all:
-	rm -rf bin/*	
+	make clean-afile
+	make clean-ifile
+	make clean-quicksort
+	make clean-bstree-nodelete
+	make clean-bstree-withdelete
+	make clean-ofile
+	make clean-dfile	
 
 clean-afile:
 	rm bin/output/afile/*

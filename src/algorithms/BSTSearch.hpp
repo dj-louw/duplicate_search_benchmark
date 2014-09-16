@@ -46,28 +46,36 @@ class BSTree {
 				return _node;
 			else
 				return FindSmallest(_node->mLeft);		
-
 		}
 
 		void DeleteNode(BSTreeNode *& _node)
 		{
 			if (!_node->mLeft && !_node->mRight) // no subtrees
 			{
+				cout << "No subtrees" << endl;
 				delete _node;
+				_node = NULL;
 			}
 			else if (_node->mLeft && !(_node->mRight)) // only left subtree
 			{
+				cout << "Left subtree" << endl;
 				_node = _node->mLeft;
 			}
 			else if (_node->mRight && !(_node->mLeft)) // only right subtree
 			{
+				cout << "Right subtree" << endl;
 				_node = _node->mRight;
 			}
 			else // both subtrees exist.
 			{
+				cout << "two subtrees" << endl;
 				BSTreeNode * temp = FindSmallest(_node);
 				_node->mData = temp->mData;
-				delete temp;
+					
+				DeleteNode(temp);
+
+				// delete temp;
+				// temp = NULL;
 			}
 
 		}
