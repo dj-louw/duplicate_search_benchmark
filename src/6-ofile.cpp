@@ -35,10 +35,12 @@ int main()
 			cout << "Opening " << QuickFileName.str() << " and " << BSTFileName.str() << " and " << OfileName.str() << endl;
 			
 			// open the input file (A-FILE)
-			ftQuick.InitIFile(QuickFileName.str());
-			ftBST.InitIFile(BSTFileName.str());
+			bool quickSuccess = ftQuick.InitIFile(QuickFileName.str());
+			bool bstSuccess = ftBST.InitIFile(BSTFileName.str());
 			ftOfile.InitOFile(OfileName.str());
 			
+			if (!quickSuccess || !bstSuccess)
+				break;
 
 			int QuickSortTime, BSTTime, QuickSortTimeCounter, BSTTimeCounter;
 			QuickSortTime = BSTTime = 0;

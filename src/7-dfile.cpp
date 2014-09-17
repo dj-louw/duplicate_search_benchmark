@@ -43,8 +43,10 @@ int main()
 			
 
 			cout << "Opening " << iFileName.str() << endl;
-			ft.InitIFile(iFileName.str());
-			
+			bool initSuccess = ft.InitIFile(iFileName.str());
+				
+			if (!initSuccess)
+				break;
 
 			vector<string> lines, numbers;
 

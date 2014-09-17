@@ -6,7 +6,7 @@
 #include <thread> // std::this_thread::sleep_for()
 
 
-// External Library includs
+// External Library includEs
 #include "../danlib/danlib.h"
 
 
@@ -55,7 +55,6 @@ int main()
 						int temp = atoi(elem.c_str());
 						currentData.push_back(temp);
 					}
-
 
 					// make sure the system sleeps for at least a second so that the rng gets seeded with a new seed every time.
 					std::this_thread::sleep_for(std::chrono::seconds(1));

@@ -9,20 +9,25 @@ unsigned long long int StepCounter;
 struct BSTreeNode
 {
 	int mData;
-	BSTreeNode *mLeft, *mRight;
+	BSTreeNode *mLeft, *mRight, *mParent;
 	BSTreeNode(int i)
 	{
 		StepCounter = StepCounter + 3;
 		mData = i;
 		mLeft = NULL;
 		mRight = NULL;
+		mParent = NULL;
 	}
-	~BSTreeNode()
-	{
-		StepCounter = StepCounter + 2;
-		delete mLeft;
-		delete mRight;
-	}
+	// ~BSTreeNode()
+	// {
+	// 	//StepCounter = StepCounter + 2;
+	// 	// if (mLeft)
+	// 	// 	delete mLeft;
+	// 	// if (mRight)
+	// 	// 	delete mRight;
+	// 	// if (mParent)
+	// 	// 	mParent = NULL;
+	// }
 };
 
 class BSTree {
@@ -40,9 +45,13 @@ class BSTree {
 			delete mRoot;
 		}
 
+
+/******************************************************************************
+******************* DELETION LOGIC
+*
 		BSTreeNode * FindSmallest(BSTreeNode *& _node)
 		{
-			if (_node->mLeft)
+			if (!_node->mLeft)
 				return _node;
 			else
 				return FindSmallest(_node->mLeft);		
@@ -50,53 +59,69 @@ class BSTree {
 
 		void DeleteNode(BSTreeNode *& _node)
 		{
+
 			if (!_node->mLeft && !_node->mRight) // no subtrees
 			{
-				cout << "No subtrees" << endl;
-				delete _node;
+				//delete _node;
 				_node = NULL;
 			}
 			else if (_node->mLeft && !(_node->mRight)) // only left subtree
-			{
-				cout << "Left subtree" << endl;
-				_node = _node->mLeft;
+			{				
+				if (_node->mParent)
+				{
+					if (_node->mParent->mLeft == _node)// i belong to my parent's mLeft
+						_node->mParent->mLeft = _node->mLeft;
+					else // I belong to my parent's mRight
+						_node->mParent->mRight = _node->mLeft;					
+				} else
+					mRoot = _node->mLeft;
 			}
 			else if (_node->mRight && !(_node->mLeft)) // only right subtree
-			{
-				cout << "Right subtree" << endl;
-				_node = _node->mRight;
+			{				
+				if (_node->mParent)
+								{
+					if (_node->mParent->mLeft == _node)// i belong to my parent's mLeft
+						_node->mParent->mLeft = _node->mRight;
+					else // I belong to my parent's mRight
+						_node->mParent->mRight = _node->mRight;
+				} else
+					mRoot = _node->mLeft;
 			}
 			else // both subtrees exist.
 			{
-				cout << "two subtrees" << endl;
-				BSTreeNode * temp = FindSmallest(_node);
-				_node->mData = temp->mData;
-					
+				BSTreeNode * temp = FindSmallest(_node->mRight);
+				_node->mData = temp->mData;	
 				DeleteNode(temp);
-
-				// delete temp;
-				// temp = NULL;
 			}
 
 		}
 
-		void InsertInto(BSTreeNode *& _node, int _valueToInsert)
+/******************************************************************
+****** DELETION LOGIC
+*/
+
+
+
+
+		void InsertInto(BSTreeNode *& _node, int _valueToInsert, BSTreeNode *& _parent)
 		{	
+
 			StepCounter = StepCounter + 5;
 			if (!_node)
 			{
 				StepCounter = StepCounter + 2;
 				_node = new BSTreeNode(_valueToInsert);
+				_node->mParent = _parent;
 			}
 			else if (_valueToInsert < _node->mData)
 			{
 				StepCounter = StepCounter + 2;
-				InsertInto(_node->mLeft, _valueToInsert);			
+				InsertInto(_node->mLeft, _valueToInsert, _node);			
 			}
 			else if (_valueToInsert > _node->mData)
 			{
 				StepCounter = StepCounter + 2;
-				InsertInto(_node->mRight, _valueToInsert);
+				InsertInto(_node->mRight, _valueToInsert, _node);
 			}
 			else
 			{
@@ -112,8 +137,9 @@ class BSTree {
 
 		void InsertIntoRoot(int _valueToInsert)
 		{
+			BSTreeNode * parent = NULL;
 			StepCounter = StepCounter + 1;
-			InsertInto(mRoot, _valueToInsert);
+			InsertInto(mRoot, _valueToInsert, parent);
 		}
 };
 
@@ -137,6 +163,10 @@ class BSTSearch
 		// 	bstree = new BSTree();
 		// 	TempDupsCounter = 0;
 		// }
+		~BSTSearch()
+		{
+			delete bstree;
+		}
 		void Init(vector<int> & _inputArray, bool _withDelete = false)
 		{
 			StepCounter = StepCounter + 4;
@@ -171,8 +201,8 @@ class BSTSearch
 
 			TempDupsCounter = bstree->mDupCounter;			
 
-			delete bstree;
-			bstree = new BSTree();
+			// delete bstree;
+			// bstree = NULL;
 		}
 
 		void DoForAStream(int _newNumber)

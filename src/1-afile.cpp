@@ -8,11 +8,6 @@
 #include "../danlib/danlib.h"
 
 
-
-
-
-
-
 using namespace std;
 
 // function that creates and populates an array of size @ArraySize with random numbers.
@@ -39,8 +34,6 @@ vector<int> GenerateArray(int _arraySize, float _fractionDuplicates = 0.5)
 	{
 		if (ArrayOfNumbers.size() < _arraySize)
 			ArrayOfNumbers.push_back(i);
-		// if (ArrayOfNumbers.size() < _arraySize)
-		// 	ArrayOfNumbers.push_back(i*2);
 	}
 	return ArrayOfNumbers;
 }
@@ -89,7 +82,6 @@ int main()
 
 		cout << endl << ">" << float(p) << "<" << endl;
 
-
 		// 100 elems
 		n = 100;
 		y = 1;
@@ -114,7 +106,6 @@ int main()
 		n = 8100;
 		y = 5;
 		CreateFileAndPopulate(x, y, p, n);
-
 
 	}
 
