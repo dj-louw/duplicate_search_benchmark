@@ -17,6 +17,7 @@ all:
 	make 5-bstree-withdelete
 	make 6-ofile
 	make 7-dfile
+	make hashtabletest
 
 1-afile: init-afile
 	$(CXX) 1-afile.cpp -o bin/1-afile.out
@@ -41,6 +42,9 @@ all:
 
 test:
 	$(CXX) test.cpp -o bin/test.out	
+
+hashtabletest:
+	$(CXX) HashTableTest.cpp -o bin/hashtabletest.out		
 
 
 #########################################
@@ -76,6 +80,10 @@ clean-ofile:
 
 clean-dfile:
 	rm bin/output/dfile/*
+
+clean:
+	rm -r bin/*
+
 
 
 
