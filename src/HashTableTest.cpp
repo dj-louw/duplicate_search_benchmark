@@ -4,6 +4,7 @@
 #include <string> // for std::string
 #include <thread> // std::this_thread::sleep_for()
 #include <unordered_map> // for std::unordered_map
+#include <chrono> // for high_resolution_clock
 
 // External Library includs
 #include "../danlib/danlib.h"
@@ -54,14 +55,14 @@ int main()
 	cout << "Hash Table Algorithm" << endl;
 
 	DanLib::FileTool outtputFile;
-	outFile.InitOFile("HasTable");
+	outtputFile.InitOFile("HashTable");
 	stringstream OutputStream;
 
-	for (int i=1;i<=10;i=i*10)
+	for (int i=1;i<=100000;i=i*10)
 	{
-
-		cout << "TEST: " << i << " buckets with 1000 elements" << endl;
-		OutputStream << "TEST: " << i << " buckets with 1000 elements" << endl;
+		auto ExpectedLoadFactor = 1000/(double)i;
+		cout << "TEST: " << i << " buckets with 1000 elements, expected Load Factor of: " << ExpectedLoadFactor << endl;
+		OutputStream << "TEST: " << i << " buckets with 1000 elements: " << ExpectedLoadFactor << endl;
 
 		for (float f = 0.0; f <= 1.1; f = f+0.1)
 		{
@@ -70,15 +71,18 @@ int main()
 			
 			vector<int> ArrayOfNumbers  = GenerateArray(1000, f);
 
+			int bucketcount, elementcount;
+			double loadfactor;
+
+   			long int RunningDuration = 0;
+			// repeat each test iteration 100 times so that we get balanced results.
+			for (int iteration = 0; iteration <=100; iteration++)
+			{
+    			
 // Time critical section
 //==============================================================================
-			
-			// repeat each test iteration 100 times so that we get balanced results.
-			for (int iteration = 0; i <=100; i++)
-			{
-
-				cout << "Iteration: " << iteration << endl;
-				OutputStream << "Iteration: " << iteration << endl;
+    			chrono::high_resolution_clock::time_point t1 = chrono::high_resolution_clock::now();
+//==============================================================================    
 
 				std::unordered_map<int,int> HashTable;
 				HashTable.max_load_factor(INFINITY);
@@ -93,22 +97,41 @@ int main()
 						HashTable.erase(retval.first);
 
 				}
+
+				loadfactor = HashTable.load_factor();
+				bucketcount = HashTable.bucket_count();
+				elementcount = HashTable.size();
+
+// Time critical section
+//==============================================================================
+    			chrono::high_resolution_clock::time_point t2 = chrono::high_resolution_clock::now();
+//==============================================================================
 				
+				auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
+				RunningDuration += duration;
+
 			}
 
 
 // Time critical section
 //==============================================================================
 
+			cout << "		Final Table Size: " << elementcount << endl;
+			OutputStream << "		Final Table Size: " << elementcount << endl;
 
-			cout << "        Final Table size: " << HashTable.size() << endl;
-			OutputStream << "        Final Table size: " << HashTable.size() << endl;
+			cout << "		Achieved Bucket Count: " << bucketcount << endl;
+			OutputStream << "		Achieved Bucket Count: " << bucketcount << endl;
 
+			cout << "		Achieved Load Factor: " << loadfactor << endl;
+			OutputStream << "		Achieved Load Factor: " << loadfactor << endl;
+
+			cout << "		Duration: " << RunningDuration/100 << " Microseconds" << endl;
+			OutputStream << "		Duration: " << RunningDuration/100 << " Microseconds" << endl;
 		}
 		cout << endl;
 	}
 
-	outFile.WriteToFile(OutputStream.str());
+	outtputFile.WriteToFile(OutputStream.str());
 
 		//DanLib::PrintArray(ArrayOfNumbers);
 
