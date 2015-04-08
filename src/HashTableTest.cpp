@@ -48,48 +48,67 @@ vector<int> GenerateArray(int _arraySize, float _fractionDuplicates = 0.5)
 }
 
 
-
 int main()
 {
 
 	cout << "Hash Table Algorithm" << endl;
 
+	DanLib::FileTool outtputFile;
+	outFile.InitOFile("HasTable");
+	stringstream OutputStream;
 
 	for (int i=1;i<=10;i=i*10)
 	{
 
 		cout << "TEST: " << i << " buckets with 1000 elements" << endl;
+		OutputStream << "TEST: " << i << " buckets with 1000 elements" << endl;
 
 		for (float f = 0.0; f <= 1.1; f = f+0.1)
 		{
 			cout << "    and duplicate factor of " << f << endl;
+			OutputStream << "    and duplicate factor of " << f << endl;
 			
-			std::unordered_map<int,int> HashTable;
-			HashTable.max_load_factor(INFINITY);
-			HashTable.rehash(i);
-
 			vector<int> ArrayOfNumbers  = GenerateArray(1000, f);
-	
-			// Time critical section
-			for (auto elem : ArrayOfNumbers)
-			{
-				std::pair<int,int> kvpair (elem,elem);
-				pair<typename std::unordered_map< int, int >::iterator,bool> retval = HashTable.insert(kvpair);
-				
-				if (retval.second == false) 
-					HashTable.erase(retval.first);
 
+// Time critical section
+//==============================================================================
+			
+			// repeat each test iteration 100 times so that we get balanced results.
+			for (int iteration = 0; i <=100; i++)
+			{
+
+				cout << "Iteration: " << iteration << endl;
+				OutputStream << "Iteration: " << iteration << endl;
+
+				std::unordered_map<int,int> HashTable;
+				HashTable.max_load_factor(INFINITY);
+				HashTable.rehash(i);
+
+				for (auto elem : ArrayOfNumbers)
+				{
+					std::pair<int,int> kvpair (elem,elem);
+					pair<typename std::unordered_map< int, int >::iterator,bool> retval = HashTable.insert(kvpair);
+					
+					if (retval.second == false) 
+						HashTable.erase(retval.first);
+
+				}
+				
 			}
-			// Time critical section
+
+
+// Time critical section
+//==============================================================================
 
 
 			cout << "        Final Table size: " << HashTable.size() << endl;
+			OutputStream << "        Final Table size: " << HashTable.size() << endl;
 
 		}
 		cout << endl;
 	}
 
-
+	outFile.WriteToFile(OutputStream.str());
 
 		//DanLib::PrintArray(ArrayOfNumbers);
 
