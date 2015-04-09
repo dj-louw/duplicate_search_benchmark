@@ -3,334 +3,334 @@ TEST: 1 buckets with 1000 elements: 1000
 		Final Table Size: 1000
 		Achieved Bucket Count: 2
 		Achieved Load Factor: 500
-		Duration: 29245 Microseconds
+		Duration: 31327 Microseconds
     and duplicate factor of 0.1
 		Final Table Size: 900
 		Achieved Bucket Count: 2
 		Achieved Load Factor: 450
-		Duration: 25407 Microseconds
+		Duration: 28587 Microseconds
     and duplicate factor of 0.2
 		Final Table Size: 800
 		Achieved Bucket Count: 2
 		Achieved Load Factor: 400
-		Duration: 19380 Microseconds
+		Duration: 25039 Microseconds
     and duplicate factor of 0.3
 		Final Table Size: 700
 		Achieved Bucket Count: 2
 		Achieved Load Factor: 350
-		Duration: 16249 Microseconds
+		Duration: 22768 Microseconds
     and duplicate factor of 0.4
 		Final Table Size: 600
 		Achieved Bucket Count: 2
 		Achieved Load Factor: 300
-		Duration: 11113 Microseconds
+		Duration: 20206 Microseconds
     and duplicate factor of 0.5
 		Final Table Size: 500
 		Achieved Bucket Count: 2
 		Achieved Load Factor: 250
-		Duration: 7989 Microseconds
+		Duration: 20416 Microseconds
     and duplicate factor of 0.6
 		Final Table Size: 400
 		Achieved Bucket Count: 2
 		Achieved Load Factor: 200
-		Duration: 5191 Microseconds
+		Duration: 17150 Microseconds
     and duplicate factor of 0.7
 		Final Table Size: 300
 		Achieved Bucket Count: 2
 		Achieved Load Factor: 150
-		Duration: 3241 Microseconds
+		Duration: 13575 Microseconds
     and duplicate factor of 0.8
 		Final Table Size: 200
 		Achieved Bucket Count: 2
 		Achieved Load Factor: 100
-		Duration: 1610 Microseconds
+		Duration: 11969 Microseconds
     and duplicate factor of 0.9
 		Final Table Size: 100
 		Achieved Bucket Count: 2
 		Achieved Load Factor: 50
-		Duration: 733 Microseconds
+		Duration: 9714 Microseconds
     and duplicate factor of 1
 		Final Table Size: 0
 		Achieved Bucket Count: 2
 		Achieved Load Factor: 0
-		Duration: 587 Microseconds
+		Duration: 7829 Microseconds
 TEST: 10 buckets with 1000 elements: 100
     and duplicate factor of 0
 		Final Table Size: 1000
 		Achieved Bucket Count: 11
 		Achieved Load Factor: 90.9091
-		Duration: 5671 Microseconds
+		Duration: 5920 Microseconds
     and duplicate factor of 0.1
 		Final Table Size: 900
 		Achieved Bucket Count: 11
 		Achieved Load Factor: 81.8182
-		Duration: 4577 Microseconds
+		Duration: 5312 Microseconds
     and duplicate factor of 0.2
 		Final Table Size: 800
 		Achieved Bucket Count: 11
 		Achieved Load Factor: 72.7273
-		Duration: 3742 Microseconds
+		Duration: 4737 Microseconds
     and duplicate factor of 0.3
 		Final Table Size: 700
 		Achieved Bucket Count: 11
 		Achieved Load Factor: 63.6364
-		Duration: 3021 Microseconds
+		Duration: 4309 Microseconds
     and duplicate factor of 0.4
 		Final Table Size: 600
 		Achieved Bucket Count: 11
 		Achieved Load Factor: 54.5455
-		Duration: 2454 Microseconds
+		Duration: 3822 Microseconds
     and duplicate factor of 0.5
 		Final Table Size: 500
 		Achieved Bucket Count: 11
 		Achieved Load Factor: 45.4545
-		Duration: 1776 Microseconds
+		Duration: 3433 Microseconds
     and duplicate factor of 0.6
 		Final Table Size: 400
 		Achieved Bucket Count: 11
 		Achieved Load Factor: 36.3636
-		Duration: 1357 Microseconds
+		Duration: 3210 Microseconds
     and duplicate factor of 0.7
 		Final Table Size: 300
 		Achieved Bucket Count: 11
 		Achieved Load Factor: 27.2727
-		Duration: 930 Microseconds
+		Duration: 2658 Microseconds
     and duplicate factor of 0.8
 		Final Table Size: 200
 		Achieved Bucket Count: 11
 		Achieved Load Factor: 18.1818
-		Duration: 689 Microseconds
+		Duration: 2385 Microseconds
     and duplicate factor of 0.9
 		Final Table Size: 100
 		Achieved Bucket Count: 11
 		Achieved Load Factor: 9.09091
-		Duration: 586 Microseconds
+		Duration: 2230 Microseconds
     and duplicate factor of 1
 		Final Table Size: 0
 		Achieved Bucket Count: 11
 		Achieved Load Factor: 0
-		Duration: 460 Microseconds
+		Duration: 1902 Microseconds
 TEST: 100 buckets with 1000 elements: 10
     and duplicate factor of 0
 		Final Table Size: 1000
 		Achieved Bucket Count: 103
 		Achieved Load Factor: 9.70874
-		Duration: 904 Microseconds
+		Duration: 870 Microseconds
     and duplicate factor of 0.1
 		Final Table Size: 900
 		Achieved Bucket Count: 103
 		Achieved Load Factor: 8.73786
-		Duration: 832 Microseconds
+		Duration: 854 Microseconds
     and duplicate factor of 0.2
 		Final Table Size: 800
 		Achieved Bucket Count: 103
 		Achieved Load Factor: 7.76699
-		Duration: 782 Microseconds
+		Duration: 829 Microseconds
     and duplicate factor of 0.3
 		Final Table Size: 700
 		Achieved Bucket Count: 103
 		Achieved Load Factor: 6.79612
-		Duration: 747 Microseconds
+		Duration: 767 Microseconds
     and duplicate factor of 0.4
 		Final Table Size: 600
 		Achieved Bucket Count: 103
 		Achieved Load Factor: 5.82524
-		Duration: 573 Microseconds
+		Duration: 753 Microseconds
     and duplicate factor of 0.5
 		Final Table Size: 500
 		Achieved Bucket Count: 103
 		Achieved Load Factor: 4.85437
-		Duration: 540 Microseconds
+		Duration: 737 Microseconds
     and duplicate factor of 0.6
 		Final Table Size: 400
 		Achieved Bucket Count: 103
 		Achieved Load Factor: 3.8835
-		Duration: 484 Microseconds
+		Duration: 692 Microseconds
     and duplicate factor of 0.7
 		Final Table Size: 300
 		Achieved Bucket Count: 103
 		Achieved Load Factor: 2.91262
-		Duration: 462 Microseconds
+		Duration: 672 Microseconds
     and duplicate factor of 0.8
 		Final Table Size: 200
 		Achieved Bucket Count: 103
 		Achieved Load Factor: 1.94175
-		Duration: 475 Microseconds
+		Duration: 644 Microseconds
     and duplicate factor of 0.9
 		Final Table Size: 100
 		Achieved Bucket Count: 103
 		Achieved Load Factor: 0.970874
-		Duration: 455 Microseconds
+		Duration: 622 Microseconds
     and duplicate factor of 1
 		Final Table Size: 0
 		Achieved Bucket Count: 103
 		Achieved Load Factor: 0
-		Duration: 444 Microseconds
+		Duration: 655 Microseconds
 TEST: 1000 buckets with 1000 elements: 1
     and duplicate factor of 0
 		Final Table Size: 1000
 		Achieved Bucket Count: 1031
 		Achieved Load Factor: 0.969932
-		Duration: 456 Microseconds
+		Duration: 508 Microseconds
     and duplicate factor of 0.1
 		Final Table Size: 900
 		Achieved Bucket Count: 1031
 		Achieved Load Factor: 0.872939
-		Duration: 452 Microseconds
+		Duration: 442 Microseconds
     and duplicate factor of 0.2
 		Final Table Size: 800
 		Achieved Bucket Count: 1031
 		Achieved Load Factor: 0.775946
-		Duration: 455 Microseconds
+		Duration: 531 Microseconds
     and duplicate factor of 0.3
 		Final Table Size: 700
 		Achieved Bucket Count: 1031
 		Achieved Load Factor: 0.678952
-		Duration: 460 Microseconds
+		Duration: 462 Microseconds
     and duplicate factor of 0.4
 		Final Table Size: 600
 		Achieved Bucket Count: 1031
 		Achieved Load Factor: 0.581959
-		Duration: 452 Microseconds
+		Duration: 477 Microseconds
     and duplicate factor of 0.5
 		Final Table Size: 500
 		Achieved Bucket Count: 1031
 		Achieved Load Factor: 0.484966
-		Duration: 445 Microseconds
+		Duration: 533 Microseconds
     and duplicate factor of 0.6
 		Final Table Size: 400
 		Achieved Bucket Count: 1031
 		Achieved Load Factor: 0.387973
-		Duration: 458 Microseconds
+		Duration: 555 Microseconds
     and duplicate factor of 0.7
 		Final Table Size: 300
 		Achieved Bucket Count: 1031
 		Achieved Load Factor: 0.29098
-		Duration: 457 Microseconds
+		Duration: 630 Microseconds
     and duplicate factor of 0.8
 		Final Table Size: 200
 		Achieved Bucket Count: 1031
 		Achieved Load Factor: 0.193986
-		Duration: 459 Microseconds
+		Duration: 658 Microseconds
     and duplicate factor of 0.9
 		Final Table Size: 100
 		Achieved Bucket Count: 1031
 		Achieved Load Factor: 0.0969932
-		Duration: 524 Microseconds
+		Duration: 533 Microseconds
     and duplicate factor of 1
 		Final Table Size: 0
 		Achieved Bucket Count: 1031
 		Achieved Load Factor: 0
-		Duration: 454 Microseconds
+		Duration: 552 Microseconds
 TEST: 10000 buckets with 1000 elements: 0.1
     and duplicate factor of 0
 		Final Table Size: 1000
 		Achieved Bucket Count: 10273
 		Achieved Load Factor: 0.0973426
-		Duration: 451 Microseconds
+		Duration: 448 Microseconds
     and duplicate factor of 0.1
 		Final Table Size: 900
 		Achieved Bucket Count: 10273
 		Achieved Load Factor: 0.0876083
-		Duration: 581 Microseconds
+		Duration: 456 Microseconds
     and duplicate factor of 0.2
 		Final Table Size: 800
 		Achieved Bucket Count: 10273
 		Achieved Load Factor: 0.077874
-		Duration: 532 Microseconds
+		Duration: 480 Microseconds
     and duplicate factor of 0.3
 		Final Table Size: 700
 		Achieved Bucket Count: 10273
 		Achieved Load Factor: 0.0681398
-		Duration: 453 Microseconds
+		Duration: 470 Microseconds
     and duplicate factor of 0.4
 		Final Table Size: 600
 		Achieved Bucket Count: 10273
 		Achieved Load Factor: 0.0584055
-		Duration: 590 Microseconds
+		Duration: 476 Microseconds
     and duplicate factor of 0.5
 		Final Table Size: 500
 		Achieved Bucket Count: 10273
 		Achieved Load Factor: 0.0486713
-		Duration: 453 Microseconds
+		Duration: 490 Microseconds
     and duplicate factor of 0.6
 		Final Table Size: 400
 		Achieved Bucket Count: 10273
 		Achieved Load Factor: 0.038937
-		Duration: 454 Microseconds
+		Duration: 497 Microseconds
     and duplicate factor of 0.7
 		Final Table Size: 300
 		Achieved Bucket Count: 10273
 		Achieved Load Factor: 0.0292028
-		Duration: 558 Microseconds
+		Duration: 527 Microseconds
     and duplicate factor of 0.8
 		Final Table Size: 200
 		Achieved Bucket Count: 10273
 		Achieved Load Factor: 0.0194685
-		Duration: 452 Microseconds
+		Duration: 529 Microseconds
     and duplicate factor of 0.9
 		Final Table Size: 100
 		Achieved Bucket Count: 10273
 		Achieved Load Factor: 0.00973426
-		Duration: 458 Microseconds
+		Duration: 527 Microseconds
     and duplicate factor of 1
 		Final Table Size: 0
 		Achieved Bucket Count: 10273
 		Achieved Load Factor: 0
-		Duration: 599 Microseconds
+		Duration: 528 Microseconds
 TEST: 100000 buckets with 1000 elements: 0.01
     and duplicate factor of 0
 		Final Table Size: 1000
 		Achieved Bucket Count: 107897
 		Achieved Load Factor: 0.0092681
-		Duration: 602 Microseconds
+		Duration: 603 Microseconds
     and duplicate factor of 0.1
 		Final Table Size: 900
 		Achieved Bucket Count: 107897
 		Achieved Load Factor: 0.00834129
-		Duration: 565 Microseconds
+		Duration: 579 Microseconds
     and duplicate factor of 0.2
 		Final Table Size: 800
 		Achieved Bucket Count: 107897
 		Achieved Load Factor: 0.00741448
-		Duration: 658 Microseconds
+		Duration: 578 Microseconds
     and duplicate factor of 0.3
 		Final Table Size: 700
 		Achieved Bucket Count: 107897
 		Achieved Load Factor: 0.00648767
-		Duration: 586 Microseconds
+		Duration: 618 Microseconds
     and duplicate factor of 0.4
 		Final Table Size: 600
 		Achieved Bucket Count: 107897
 		Achieved Load Factor: 0.00556086
-		Duration: 670 Microseconds
+		Duration: 595 Microseconds
     and duplicate factor of 0.5
 		Final Table Size: 500
 		Achieved Bucket Count: 107897
 		Achieved Load Factor: 0.00463405
-		Duration: 570 Microseconds
+		Duration: 607 Microseconds
     and duplicate factor of 0.6
 		Final Table Size: 400
 		Achieved Bucket Count: 107897
 		Achieved Load Factor: 0.00370724
-		Duration: 565 Microseconds
+		Duration: 619 Microseconds
     and duplicate factor of 0.7
 		Final Table Size: 300
 		Achieved Bucket Count: 107897
 		Achieved Load Factor: 0.00278043
-		Duration: 594 Microseconds
+		Duration: 627 Microseconds
     and duplicate factor of 0.8
 		Final Table Size: 200
 		Achieved Bucket Count: 107897
 		Achieved Load Factor: 0.00185362
-		Duration: 594 Microseconds
+		Duration: 649 Microseconds
     and duplicate factor of 0.9
 		Final Table Size: 100
 		Achieved Bucket Count: 107897
 		Achieved Load Factor: 0.00092681
-		Duration: 606 Microseconds
+		Duration: 666 Microseconds
     and duplicate factor of 1
 		Final Table Size: 0
 		Achieved Bucket Count: 107897
 		Achieved Load Factor: 0
-		Duration: 696 Microseconds
+		Duration: 647 Microseconds

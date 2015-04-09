@@ -1,0 +1,336 @@
+TEST: 1 buckets with 1000 elements: 1000
+    and duplicate factor of 0
+		Final Table Size: 1000
+		Achieved Bucket Count: 2
+		Achieved Load Factor: 500
+		Duration: 30479 Microseconds
+    and duplicate factor of 0.1
+		Final Table Size: 900
+		Achieved Bucket Count: 2
+		Achieved Load Factor: 450
+		Duration: 28043 Microseconds
+    and duplicate factor of 0.2
+		Final Table Size: 800
+		Achieved Bucket Count: 2
+		Achieved Load Factor: 400
+		Duration: 25218 Microseconds
+    and duplicate factor of 0.3
+		Final Table Size: 700
+		Achieved Bucket Count: 2
+		Achieved Load Factor: 350
+		Duration: 22725 Microseconds
+    and duplicate factor of 0.4
+		Final Table Size: 600
+		Achieved Bucket Count: 2
+		Achieved Load Factor: 300
+		Duration: 23399 Microseconds
+    and duplicate factor of 0.5
+		Final Table Size: 500
+		Achieved Bucket Count: 2
+		Achieved Load Factor: 250
+		Duration: 17518 Microseconds
+    and duplicate factor of 0.6
+		Final Table Size: 400
+		Achieved Bucket Count: 2
+		Achieved Load Factor: 200
+		Duration: 15950 Microseconds
+    and duplicate factor of 0.7
+		Final Table Size: 300
+		Achieved Bucket Count: 2
+		Achieved Load Factor: 150
+		Duration: 13413 Microseconds
+    and duplicate factor of 0.8
+		Final Table Size: 200
+		Achieved Bucket Count: 2
+		Achieved Load Factor: 100
+		Duration: 13442 Microseconds
+    and duplicate factor of 0.9
+		Final Table Size: 100
+		Achieved Bucket Count: 2
+		Achieved Load Factor: 50
+		Duration: 10471 Microseconds
+    and duplicate factor of 1
+		Final Table Size: 0
+		Achieved Bucket Count: 2
+		Achieved Load Factor: 0
+		Duration: 11294 Microseconds
+TEST: 10 buckets with 1000 elements: 100
+    and duplicate factor of 0
+		Final Table Size: 1000
+		Achieved Bucket Count: 11
+		Achieved Load Factor: 90.9091
+		Duration: 5889 Microseconds
+    and duplicate factor of 0.1
+		Final Table Size: 900
+		Achieved Bucket Count: 11
+		Achieved Load Factor: 81.8182
+		Duration: 5321 Microseconds
+    and duplicate factor of 0.2
+		Final Table Size: 800
+		Achieved Bucket Count: 11
+		Achieved Load Factor: 72.7273
+		Duration: 4959 Microseconds
+    and duplicate factor of 0.3
+		Final Table Size: 700
+		Achieved Bucket Count: 11
+		Achieved Load Factor: 63.6364
+		Duration: 4319 Microseconds
+    and duplicate factor of 0.4
+		Final Table Size: 600
+		Achieved Bucket Count: 11
+		Achieved Load Factor: 54.5455
+		Duration: 3955 Microseconds
+    and duplicate factor of 0.5
+		Final Table Size: 500
+		Achieved Bucket Count: 11
+		Achieved Load Factor: 45.4545
+		Duration: 3435 Microseconds
+    and duplicate factor of 0.6
+		Final Table Size: 400
+		Achieved Bucket Count: 11
+		Achieved Load Factor: 36.3636
+		Duration: 3115 Microseconds
+    and duplicate factor of 0.7
+		Final Table Size: 300
+		Achieved Bucket Count: 11
+		Achieved Load Factor: 27.2727
+		Duration: 2749 Microseconds
+    and duplicate factor of 0.8
+		Final Table Size: 200
+		Achieved Bucket Count: 11
+		Achieved Load Factor: 18.1818
+		Duration: 2443 Microseconds
+    and duplicate factor of 0.9
+		Final Table Size: 100
+		Achieved Bucket Count: 11
+		Achieved Load Factor: 9.09091
+		Duration: 2212 Microseconds
+    and duplicate factor of 1
+		Final Table Size: 0
+		Achieved Bucket Count: 11
+		Achieved Load Factor: 0
+		Duration: 1908 Microseconds
+TEST: 100 buckets with 1000 elements: 10
+    and duplicate factor of 0
+		Final Table Size: 1000
+		Achieved Bucket Count: 103
+		Achieved Load Factor: 9.70874
+		Duration: 896 Microseconds
+    and duplicate factor of 0.1
+		Final Table Size: 900
+		Achieved Bucket Count: 103
+		Achieved Load Factor: 8.73786
+		Duration: 870 Microseconds
+    and duplicate factor of 0.2
+		Final Table Size: 800
+		Achieved Bucket Count: 103
+		Achieved Load Factor: 7.76699
+		Duration: 798 Microseconds
+    and duplicate factor of 0.3
+		Final Table Size: 700
+		Achieved Bucket Count: 103
+		Achieved Load Factor: 6.79612
+		Duration: 771 Microseconds
+    and duplicate factor of 0.4
+		Final Table Size: 600
+		Achieved Bucket Count: 103
+		Achieved Load Factor: 5.82524
+		Duration: 730 Microseconds
+    and duplicate factor of 0.5
+		Final Table Size: 500
+		Achieved Bucket Count: 103
+		Achieved Load Factor: 4.85437
+		Duration: 738 Microseconds
+    and duplicate factor of 0.6
+		Final Table Size: 400
+		Achieved Bucket Count: 103
+		Achieved Load Factor: 3.8835
+		Duration: 691 Microseconds
+    and duplicate factor of 0.7
+		Final Table Size: 300
+		Achieved Bucket Count: 103
+		Achieved Load Factor: 2.91262
+		Duration: 669 Microseconds
+    and duplicate factor of 0.8
+		Final Table Size: 200
+		Achieved Bucket Count: 103
+		Achieved Load Factor: 1.94175
+		Duration: 705 Microseconds
+    and duplicate factor of 0.9
+		Final Table Size: 100
+		Achieved Bucket Count: 103
+		Achieved Load Factor: 0.970874
+		Duration: 627 Microseconds
+    and duplicate factor of 1
+		Final Table Size: 0
+		Achieved Bucket Count: 103
+		Achieved Load Factor: 0
+		Duration: 726 Microseconds
+TEST: 1000 buckets with 1000 elements: 1
+    and duplicate factor of 0
+		Final Table Size: 1000
+		Achieved Bucket Count: 1031
+		Achieved Load Factor: 0.969932
+		Duration: 501 Microseconds
+    and duplicate factor of 0.1
+		Final Table Size: 900
+		Achieved Bucket Count: 1031
+		Achieved Load Factor: 0.872939
+		Duration: 460 Microseconds
+    and duplicate factor of 0.2
+		Final Table Size: 800
+		Achieved Bucket Count: 1031
+		Achieved Load Factor: 0.775946
+		Duration: 492 Microseconds
+    and duplicate factor of 0.3
+		Final Table Size: 700
+		Achieved Bucket Count: 1031
+		Achieved Load Factor: 0.678952
+		Duration: 497 Microseconds
+    and duplicate factor of 0.4
+		Final Table Size: 600
+		Achieved Bucket Count: 1031
+		Achieved Load Factor: 0.581959
+		Duration: 490 Microseconds
+    and duplicate factor of 0.5
+		Final Table Size: 500
+		Achieved Bucket Count: 1031
+		Achieved Load Factor: 0.484966
+		Duration: 501 Microseconds
+    and duplicate factor of 0.6
+		Final Table Size: 400
+		Achieved Bucket Count: 1031
+		Achieved Load Factor: 0.387973
+		Duration: 509 Microseconds
+    and duplicate factor of 0.7
+		Final Table Size: 300
+		Achieved Bucket Count: 1031
+		Achieved Load Factor: 0.29098
+		Duration: 512 Microseconds
+    and duplicate factor of 0.8
+		Final Table Size: 200
+		Achieved Bucket Count: 1031
+		Achieved Load Factor: 0.193986
+		Duration: 526 Microseconds
+    and duplicate factor of 0.9
+		Final Table Size: 100
+		Achieved Bucket Count: 1031
+		Achieved Load Factor: 0.0969932
+		Duration: 530 Microseconds
+    and duplicate factor of 1
+		Final Table Size: 0
+		Achieved Bucket Count: 1031
+		Achieved Load Factor: 0
+		Duration: 544 Microseconds
+TEST: 10000 buckets with 1000 elements: 0.1
+    and duplicate factor of 0
+		Final Table Size: 1000
+		Achieved Bucket Count: 10273
+		Achieved Load Factor: 0.0973426
+		Duration: 449 Microseconds
+    and duplicate factor of 0.1
+		Final Table Size: 900
+		Achieved Bucket Count: 10273
+		Achieved Load Factor: 0.0876083
+		Duration: 465 Microseconds
+    and duplicate factor of 0.2
+		Final Table Size: 800
+		Achieved Bucket Count: 10273
+		Achieved Load Factor: 0.077874
+		Duration: 469 Microseconds
+    and duplicate factor of 0.3
+		Final Table Size: 700
+		Achieved Bucket Count: 10273
+		Achieved Load Factor: 0.0681398
+		Duration: 485 Microseconds
+    and duplicate factor of 0.4
+		Final Table Size: 600
+		Achieved Bucket Count: 10273
+		Achieved Load Factor: 0.0584055
+		Duration: 490 Microseconds
+    and duplicate factor of 0.5
+		Final Table Size: 500
+		Achieved Bucket Count: 10273
+		Achieved Load Factor: 0.0486713
+		Duration: 500 Microseconds
+    and duplicate factor of 0.6
+		Final Table Size: 400
+		Achieved Bucket Count: 10273
+		Achieved Load Factor: 0.038937
+		Duration: 524 Microseconds
+    and duplicate factor of 0.7
+		Final Table Size: 300
+		Achieved Bucket Count: 10273
+		Achieved Load Factor: 0.0292028
+		Duration: 541 Microseconds
+    and duplicate factor of 0.8
+		Final Table Size: 200
+		Achieved Bucket Count: 10273
+		Achieved Load Factor: 0.0194685
+		Duration: 554 Microseconds
+    and duplicate factor of 0.9
+		Final Table Size: 100
+		Achieved Bucket Count: 10273
+		Achieved Load Factor: 0.00973426
+		Duration: 548 Microseconds
+    and duplicate factor of 1
+		Final Table Size: 0
+		Achieved Bucket Count: 10273
+		Achieved Load Factor: 0
+		Duration: 550 Microseconds
+TEST: 100000 buckets with 1000 elements: 0.01
+    and duplicate factor of 0
+		Final Table Size: 1000
+		Achieved Bucket Count: 107897
+		Achieved Load Factor: 0.0092681
+		Duration: 613 Microseconds
+    and duplicate factor of 0.1
+		Final Table Size: 900
+		Achieved Bucket Count: 107897
+		Achieved Load Factor: 0.00834129
+		Duration: 629 Microseconds
+    and duplicate factor of 0.2
+		Final Table Size: 800
+		Achieved Bucket Count: 107897
+		Achieved Load Factor: 0.00741448
+		Duration: 600 Microseconds
+    and duplicate factor of 0.3
+		Final Table Size: 700
+		Achieved Bucket Count: 107897
+		Achieved Load Factor: 0.00648767
+		Duration: 599 Microseconds
+    and duplicate factor of 0.4
+		Final Table Size: 600
+		Achieved Bucket Count: 107897
+		Achieved Load Factor: 0.00556086
+		Duration: 630 Microseconds
+    and duplicate factor of 0.5
+		Final Table Size: 500
+		Achieved Bucket Count: 107897
+		Achieved Load Factor: 0.00463405
+		Duration: 638 Microseconds
+    and duplicate factor of 0.6
+		Final Table Size: 400
+		Achieved Bucket Count: 107897
+		Achieved Load Factor: 0.00370724
+		Duration: 642 Microseconds
+    and duplicate factor of 0.7
+		Final Table Size: 300
+		Achieved Bucket Count: 107897
+		Achieved Load Factor: 0.00278043
+		Duration: 668 Microseconds
+    and duplicate factor of 0.8
+		Final Table Size: 200
+		Achieved Bucket Count: 107897
+		Achieved Load Factor: 0.00185362
+		Duration: 719 Microseconds
+    and duplicate factor of 0.9
+		Final Table Size: 100
+		Achieved Bucket Count: 107897
+		Achieved Load Factor: 0.00092681
+		Duration: 670 Microseconds
+    and duplicate factor of 1
+		Final Table Size: 0
+		Achieved Bucket Count: 107897
+		Achieved Load Factor: 0
+		Duration: 707 Microseconds

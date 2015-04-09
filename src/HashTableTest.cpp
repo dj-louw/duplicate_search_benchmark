@@ -43,7 +43,7 @@ vector<int> GenerateArray(int _arraySize, float _fractionDuplicates = 0.5)
 	// seed the rng
 	srand(time(0));
 	// shuffle the vector using the fisher-yates algorithm, conveniently built into C++ for us.	
-	//std::random_shuffle(ArrayOfNumbers.begin(), ArrayOfNumbers.end());
+	std::random_shuffle(ArrayOfNumbers.begin(), ArrayOfNumbers.end());
 
 	return ArrayOfNumbers;
 }
